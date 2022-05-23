@@ -1,0 +1,11 @@
+<h1 class=header>Show Articles page</h1>
+
+<div class=show_container>
+    <div class=txt-container>
+        <p >Title: <span><%= @article.title%></span></p>
+        <p >Content: <span><%= @article.content%></span></p>
+    </div>
+</div>
+<div class= go_to>
+    <%= link_to 'Go to articles page', articles_path, :class => 'button' %>
+</div>

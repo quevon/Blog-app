@@ -1,0 +1,12 @@
+
+<div class= form_containers>
+    <%= form_with model: article do |form|%>
+    <%= form.text_field :title, placeholder: "Enter Content" ,:class => 'txt_fld' %>
+     <% article.errors.each do |error| %>
+                <%= error.full_message%>
+            <% end %>
+    <%= form.text_field :content, placeholder: "Enter Content", :class => 'txt_fld' %>
+
+    <%= form.submit :class => 'button' %>
+    <%end%>
+</div>

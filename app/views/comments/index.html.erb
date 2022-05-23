@@ -1,0 +1,37 @@
+<h1 class= header><%= @article.title%></h1>
+
+<h1 class= header>Comments Home Page</h1>
+
+
+<div class="table_container">
+    <table>
+        <thead>
+            <tr>
+                <th>Comment Body</th>
+                <th>Article id</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+        <% @comments.each do |comment| %>
+            <tr>
+                <td>
+                <%= comment.body %>
+                </td>
+                <td>
+                <%= comment.article_id %>
+                </td>
+                <td>
+                <%= link_to 'Delete', article_comment_path(@article.id, comment), method: :delete, data: {confirm: 'Are you sure?'}, :class => 'link' %>
+                </td>
+            </tr>
+        <% end %>
+        </tbody>
+    </table>
+</div>
+
+ <div class="create-container">
+        <%= link_to 'Create new', new_article_comment_path , :class => 'button'%>
+</div>

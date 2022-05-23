@@ -1,0 +1,146 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require bootstrap-datepicker
+ *= require_self
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+ .body{
+     margin: 0;
+     padding: 0;
+     font-family: 'Poppins', sans-serif;
+     
+ }
+.header{
+    text-align: center;
+}
+ /* mainpage navbar section  */
+ .navbar{
+     font-size: 100px;
+ }
+ .navbar .nav{
+    text-decoration: none;
+    color: black;
+ }
+ .navbar .nav:hover{
+     color: red;
+ }
+
+
+/* create new section  */
+.create-container{
+    padding-top: 20px;
+    text-align: center;
+}
+.create_new{
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+}
+ .create_new:hover{
+     color: red;
+ }
+
+ /* tables styling  */
+ .table_container{
+     display: flex;
+     justify-content: center;
+ }
+ table{
+    border: 1px solid;
+}
+table{
+    border-collapse: collapse;
+    width: 70% ;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #04AA6D;
+    color: white;
+}
+tr:hover {background-color: coral;}
+
+.link{
+    text-decoration: none;
+}
+
+/* form design  */
+.form_containers{
+    display: flex;
+    width: 300px;
+    height: 50%;
+    border: 1px solid black;
+    margin: 5% auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+.txt_fld{
+    font-size: 1.5rem;
+    padding: 5px;
+    margin: 10px 10px 0 10px;
+    width: 90%;
+}
+
+/* button design  */
+
+.button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.button:hover{
+    background-color: white;
+    color: black;
+    border
+    :1px solid black;
+    
+}
+
+/* error styling  */
+
+.err_msg{
+    font-size: 8px;
+    color:red;
+}
+.show_container{
+    display: flex;
+    margin:5% auto;
+    border: 1px solid black;
+    text-align: left;
+    width: 50%;
+    padding: 20px;
+}
+.show_container .txt-container p{
+    font-size: 2rem;
+}
+.show_container .txt-container p span{
+    font-size: 1.5rem;
+    color: gray;
+}
+.go_to{
+    text-align: center;
+}

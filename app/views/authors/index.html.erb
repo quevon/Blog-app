@@ -1,0 +1,47 @@
+<h1 class="header">Authors Home Page</h1>
+<div class="table_container">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Verify</th>
+                <th>Date Verified</th>
+                <th>Actions</th>
+                
+            </tr>
+        </thead>
+
+        <tbody>
+        <% @authors.each do |author| %>
+            <tr>
+                <td>
+                    <%= author.name %>
+                </td>
+                <td>
+                    <%= author.address %>
+                </td>
+                <td style ="color: green;">
+                    <%if author.verify == nil %>
+                        <%=author.verify = link_to 'Verify', verify_author_path(author) , method: :patch, data: {confirm: "Verify #{author.name}?"},:class => 'link', style: "color: red;"%>
+                    <%else%>
+                        <%= author.verify = 'Verified'%>
+                    <%end %>
+                </td>
+                <td>
+                    <%= author.date%>
+                </td>
+                <td>
+                    <%= link_to 'Edit', edit_author_path(author) , :class => 'link'%>
+                    <%= link_to 'Delete', author, method: :delete, data: {confirm: "Delete #{author.name}?"},:class => 'link' %>
+                    <%= link_to 'Show' ,author,:class => 'link' %>
+                </td>
+            </tr>
+        <% end %>
+        </tbody>
+    </table>
+</div>
+ <div class="create-container">
+        <%= link_to 'Create new', new_author_path , :class => 'button'%>
+</div>
+

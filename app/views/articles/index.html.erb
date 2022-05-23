@@ -1,0 +1,45 @@
+<h1 class= header>Articles Home Page</h1>
+
+
+<div class="table_container">
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Comment Count</th>
+                <th>Comments</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+        <% @articles.each do |article| %>
+            <tr>
+                <td>
+                <%= article.title %>
+                </td>
+                <td>
+                <%= article.content %>
+                </td>
+                <td>
+                <%= article.comments.count %>
+                </td>
+                 <td>
+                <%= link_to 'Comments', article_comments_path(article) %>
+                </td>
+                <td>
+                <%= link_to 'Edit', edit_article_path(article) , :class => 'link'%>
+                <%= link_to 'Delete', article, method: :delete, data: {confirm: 'Are you sure?'}, :class => 'link' %>
+                <%= link_to 'Show' ,article,:class => 'link' %>
+                </td>
+            </tr>
+        <% end %>
+        </tbody>
+    </table>
+</div>
+
+ <div class="create-container">
+        <%= link_to 'Create new', new_article_path , :class => 'button'%>
+</div>

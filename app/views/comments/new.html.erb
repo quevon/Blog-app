@@ -1,0 +1,10 @@
+<h1 class=header>Create Comments Page</h1>
+
+
+<div class= form_containers>
+    <%= form_with model: [@article,@comment] do |form|%>
+    <%= form.text_field :body, placeholder: "Enter Comment" ,:class => 'txt_fld' %>
+    
+    <%= form.submit :class => 'button' %>
+    <%end%>
+</div>

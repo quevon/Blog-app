@@ -1,0 +1,13 @@
+<h1 class=header>Show Authors page</h1>
+
+<div class=show_container>
+    <div class=txt-container>
+        <p >Name: <span><%= @author.name%></span></p>
+        <p >Address: <span><%= @author.address%></span></p>
+        <p >Date Verified: <span><%= @author.date %></span></p>
+    </div>
+</div>
+<div class= go_to>
+    <%= link_to 'Go to authors page', authors_path, :class => 'button' %>
+</div>
+

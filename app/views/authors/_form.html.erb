@@ -1,0 +1,24 @@
+
+
+<div class= form_containers>
+    <%= form_with model: author do |form|%>
+    <%= form.text_field :name, placeholder: "Enter Authors Name" ,:class => 'txt_fld' %>
+    <% if author.errors.any? %>
+            <% author.errors.each do |error| %>
+                <% if error.full_message == "Name can't be blank" %>
+                    <p class= "err_msg"><%= "Name can't be blank"%></p>
+                <% end %>
+            <% end %>
+    <% end %>
+    
+    <%= form.text_field :address, placeholder: "Enter Authors Address", :class => 'txt_fld' %>
+    <% if author.errors.any? %>
+            <% author.errors.each do |error| %>
+                <% if error.full_message == "Address can't be blank" %>
+                    <p class= "err_msg"><%= "Address can't be blank"%></p>
+                <% end %>
+            <% end %>
+    <% end %>
+    <%= form.submit :class => 'button' %>
+    <%end%>
+</div>
