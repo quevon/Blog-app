@@ -25,18 +25,6 @@
 .header{
     text-align: center;
 }
- /* mainpage navbar section  */
- .navbar{
-     font-size: 100px;
- }
- .navbar .nav{
-    text-decoration: none;
-    color: black;
- }
- .navbar .nav:hover{
-     color: red;
- }
-
 
 /* create new section  */
 .create-container{
@@ -143,4 +131,59 @@ tr:hover {background-color: coral;}
 }
 .go_to{
     text-align: center;
+}
+/* nav */
+
+.dropdwn nav{
+    height:60px;
+    background:#2c3e50;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+.dropdwn .logo{
+    padding: 5px 0 0 80px;
+    width:150px;
+    height: auto;
+}
+.dropdwn nav ul{
+    padding: 0;
+    margin: 0;
+    float: right;
+    margin-right: 30px;
+}
+.dropdwn nav ul li{
+    background: #2c3e50;
+    position: relative;
+    list-style:none;
+    display: inline-block;
+ }
+.dropdwn nav ul li a{
+    display: block;
+    padding: 0 25px;
+    color: var(--white);
+    text-decoration: none;
+    line-height: 60px;
+    font-size: 20px;
+}
+.dropdwn nav ul li a:hover{
+    background: #243342;
+}
+.dropdwn nav ul ul{
+    position: absolute;
+    top:60px;
+    display:none;
+}
+.dropdwn nav ul li:hover > ul{
+    display: block;
+}
+.dropdwn nav ul .drop-login li{
+    width: 125px;
+    float:none;
+    display:list-item;
+    position: relative;
+}
+.dropdwn nav ul .drop-signup li{
+    width: 140px;
+    float:none;
+    display:list-item;
+    position: relative;
 }

@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   
   </head>
 
   <body>
+    <div class=dropdwn>
+        <nav>
+            <%# <h1 class="logo">BHOUSE<h1> %>
+            <ul>
+                <li><%= link_to 'Home', root_path %></li>
+                <li><%= link_to "Authors", authors_path%></li>
+                <li> <%= link_to "Articles", articles_path%></li>
+            </ul>
+        </nav>    
+    </div>
     <%= yield %>
   </body>
 </html>

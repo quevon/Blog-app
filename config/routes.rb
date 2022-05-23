@@ -28,5 +28,6 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
   end
-  root to: 'authors#mainpage'
+
+  root to: 'authors#index'
 end
